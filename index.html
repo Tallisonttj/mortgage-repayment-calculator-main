@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/css/output.css">
+  <script src="src/assets/js/script.js" defer></script>
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body class="md:bg-Slate100">
+  <div class="mx-auto h-auto bg-White flex flex-col items-center md:items-stretch md:flex-row md:mt-30 md:w-2xl  md:shadow-lg md:shadow-gray-500 rounded-3xl lg:w-4xl lg:mt-10 ">
+    <div class="flex flex-col font-bold py-4 mx-0  items-start gap-5  text-Slate500 outline-none md:flex-1  md:w-screen md:p-5 md:rounded-5xl">
+      <div class="flex gap-2 flex-col items-start pr-4 md:flex-row md:items-center md:w-full md:justify-between">
+        <p class="text-xl text-Slate900 p-0 ">Mortgage Calculator</p>
+        <button class="clearButton font-semibold underline text-base">Clear All</button>
+      </div>
+    
+    <div>
+    </div> 
+     <div>
+      <label for="amount">Mortgage Amount</label>
+     <div class="inp border-1 hover:border-2 hover:cursor-pointer font-bold text-xl flex w-79">
+        <span class="p-2 bg-Slate100">£</span>
+        <input type="text" id="amount" pattern="\d{3}.\d{3}.\d{3},\d{2}" class="bg-White hover:cursor-pointer  outline-none pl-2"> 
+     </div>
+     </div>
+     
+     
+        <div class="md:flex md:gap-3">
+          <div>
+            <label for="term">Mortgage Term</label>
+            <div class="inp border-1 font-bold text-xl  flex hover:border-2 hover:cursor-pointer justify-between">
+              <input type="text" maxlength="2" id="term" class="bg-White outline-none pl-2 hover:cursor-pointer md:w-22"> 
+              <span class=" bg-Slate100 p-2">years</span>
+            </div>
+          </div>
+          <div>
+            <label for="rate">Interest Rate</label>
+            <div class="inp border-1 font-bold text-xl flex hover:border-2 hover:cursor-pointe justify-between">
+             <input type="text" id="rate" maxlength="4" class="bg-White outline-none pl-2 hover:cursor-pointer md:w-25"> 
+             <span class=" bg-Slate100 p-2">%</span>
+           </div>
+          </div>
+        </div>
+     
+    
+     
+      <label class="flex flex-col gap-1">Mortgage Type 
+        <label class="text-Slate900 p-2 pr-32 border-1 text-xl flex gap-2 items-center hover:border-Lime hover:cursor-pointer hover:border-2 w-79  has-checked:bg-lime-200">
+          <input type="radio" name="type" id="repay" value="Repayment" class="hidden peer">
+          <div class="w-4 h-4 rounded-full border-2 border-gray-400  peer-checked:border-white peer-checked:outline-1 peer-checked:outline-Lime  peer-checked:bg-Lime"></div>
+          <span>Repayment</span>
+        </label>
+        <label class="radio-area text-Slate900 p-2 pr-32 border-1 text-xl flex gap-2 items-center  hover:border-Lime hover:cursor-pointer hover:border-2 has-checked:bg-lime-200">
+          <input type="radio" name="type" id="interst" value="Interest Only"  class="hidden opacity-0 peer">
+          <div class="w-4 h-4 rounded-full border-2 border-gray-400  peer-checked:border-white peer-checked:outline-1 peer-checked:outline-Lime  peer-checked:bg-Lime"></div>
+          <span>Interest Only</span>
+        </label>
+      </label>
+      
+      <button class="calcButton flex text-Slate900 gap-2 py-2.5 font-bold text-xl px-4 mt-3 mx-auto md:mx-0 items-center bg-Lime rounded-4xl hover:bg-lime-300 hover:cursor-pointer"><img src="src/images/icon-calculator.svg" alt=""> Calculate Repayments</button>
+      
+    </div>
+    <div class=" bg-Slate900 text-center flex flex-col md: md:w-md md:items-center md:border-1 md:rounded-3xl md:rounded-bl-[100px]">
+      <div class="emply-results flex-col gap-2 py-20">
+      <img src="src/images/illustration-empty.svg" class="mx-auto" alt="">
+        <h1 class="text-White font-bold text-xl">Results shown here</h1>
+        <p class="text-Slate300 font-semibold text-center">Complete the form and click “calculate repayments” to see what 
+        your monthly repayments would be. </p>
+      </div>
+    
+    <div class="complet p-2 hidden">
+      <div class="text-White flex flex-col items-start justify-start text-left gap-5">
+        <p class="font-bold">Your results</p>
+        <p class="font-semibold text-Slate500">
+        Your results are shown below based on the information you provided. 
+        To adjust the results, edit the form and click “calculate repayments” again.
+        </p>
+        
+        <div class="bg-slate-950/60 flex flex-col gap-5 w-full p-5 rounded-2xl border-t-2 border-t-Lime">
+          <p class="text-Slate700">Your monthly repayments </p>
+           <h1 class="result font-semibold text-Lime text-4xl">
+           </h1>
+           <hr class="text-Slate700">
+          <p class="text-Slate700">Total you'll repay over the term </p>
+          <h3 class="total font-bold text-xl">
+          </h3>
+      </div>
+
+    </div>
+     
+       
+    
+     </div>
+     
+      
+     </div>
+  </div>
+
+
+ 
+  <div class="attribution pb-2 mt-5 text-xs text-center" >
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/tallison-tadeu-de-jesus-95965215a/" target="_blank"  class="cursor-pointer underline">Tallison Tadeu</a>.
+  </div>
+</body>
+</html>
